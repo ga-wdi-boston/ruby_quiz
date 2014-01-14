@@ -60,8 +60,8 @@ end
   # near_hundred('two') => RuntimeError: Please enter a number!
 describe '#near_hundred' do
   it 'should return true if the number is between 90 and 99' do
-    valid_num = near_hundred?(95)
-    invalid_num = near_hundred?(50)
+    valid_num = near_hundred?(99)
+    invalid_num = near_hundred?(89)
     expect(valid_num).to be true
     expect(invalid_num).to be false
   end

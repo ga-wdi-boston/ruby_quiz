@@ -57,6 +57,5 @@ def back_around(string)
 	chars_array = []
 	string.split("").each { |char| chars_array << char }
 	final_char = chars_array.pop
-	chars_array.unshift(final_char)
-	string = chars_array.join('')
+	chars_array.unshift(final_char).join('')
 end
