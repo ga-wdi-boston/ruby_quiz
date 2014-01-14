@@ -32,6 +32,14 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+  it "deletes certain letters if it has" do
+    expect(del_del("abdelcd")).to eq 'abcd'
+  end
+
+  it "deletes certain letters if it has" do
+    expect(del_del("xyz")).to eq "xyz"
+  end
+  
 
 # Question 3: a method called missing_char
   # Example Usage:
