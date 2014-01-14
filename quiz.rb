@@ -11,7 +11,22 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+	if options[:vacation] == true
+		true
+	elsif Time.now.wday == 6
+		true
+	elsif Time.now.wday == 0
+		true
+	else
+		false
+	end
+end
+
+def del_del(string)
+	str = string
+	str.slice! "del"
+	str
 end
 
 # Question 2: a method called del_del
