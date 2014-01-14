@@ -33,18 +33,46 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe '#del_del' do
+  it 'should return a string, deleting the matched part' do
+    result_with_match = del_del('Hello', /He/i)
+    result_without_match = del_del('Hello', /fish/)
+    expect(result_with_match).to eq "llo"
+    expect(result_without_match).to eq "Hello"
+  end
+end
 
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
   # missing_char(347, 1) => RuntimeError: Please enter a string!
   # https://www.relishapp.com/rspec/rspec-expectations/v/2-14/docs/built-in-matchers/raise-error-matcher
+describe '#missing_char' do
+  it 'should delete the character at the specified position of a string' do
+    result = missing_char("Hello", 1)
+    expect(result).to eq "Hllo"
+  end
+end
 
 # Question 4: a method called near_hundred
   # Example Usage:
   # near_hundred(93) => true
   # near_hundred(52) => false
   # near_hundred('two') => RuntimeError: Please enter a number!
+describe '#near_hundred' do
+  it 'should return true if the number is between 90 and 99' do
+    valid_num = near_hundred?(99)
+    invalid_num = near_hundred?(89)
+    expect(valid_num).to be true
+    expect(invalid_num).to be false
+  end
+end
+
+describe '#back_around' do
+  it 'should take the last character of a string and move it to the first position' do
+    expect('cat'.back_around).to eq "tca"
+  end
+end
 
 # Question 5: a method called back_around
   # Example Usage:
