@@ -12,7 +12,7 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?(options={})
-	Time.now.wday == 6 || Time.now.wday == 7 || options[:vacation] == true
+	[0,6].include?(Time.now.wday) || options[:vacation] == true
 end
 
 # Question 2: a method called del_del
@@ -58,8 +58,9 @@ end
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
 def back_around(string)
-	final_char = string[-1]
-	string.unshift = final_char
-	string
-
+	chars_array = []
+	string.split("").each { |char| chars_array << char }
+	final_char = chars_array.pop
+	chars_array.unshift(final_char)
+	string = chars_array.join('')
 end
