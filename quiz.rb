@@ -21,12 +21,7 @@ end
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
 def del_del(string, pattern)
-	match = pattern.match(string)
-	if match
-		"#{match.pre_match}#{match.post_match}"
-	else
-		string
-	end
+	string.gsub(pattern, '')
 end
 
 
