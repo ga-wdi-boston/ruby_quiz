@@ -4,7 +4,6 @@
 # |      /     |   __|  |  |\/|  |   /  /_\  \   |  | |  . `  |    |  |      /  /_\  \   |  |     |  |\/|  |
 # |  |\  \----.|  |____ |  |  |  |  /  _____  \  |  | |  |\   |    |  `----./  _____  \  |  `----.|  |  |  |  __
 # | _| `._____||_______||__|  |__| /__/     \__\ |__| |__| \__|     \______/__/     \__\ |_______||__|  |__| (__)
-require 'spec_helper'
 require_relative '../quiz'
 
 # The first question's tests are written.
@@ -33,6 +32,17 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+describe "del_del" do
+  it 'removes the sequence "del" from an input string' do
+    question_2 = del_del("abdelcd")
+    expect(question_2).to eq('abcd')
+  end
+
+  it 'does not remove anything from a string void of "del"' do
+    question_2 = del_del('xyz')
+    expect(question_2).to eq('xyz')
+  end
+end
 
 # Question 3: a method called missing_char
   # Example Usage:
