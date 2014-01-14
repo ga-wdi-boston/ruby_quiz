@@ -12,6 +12,14 @@
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
 def sleep_in?
+	if Time.now.wday = 1 or 2 or 3 or 4 or 5
+		return false
+	elsif Time.now.wday = 6 or 0
+		return true
+	elsif vacation? true
+		return true
+	else
+		return false
 end
 
 # Question 2: a method called del_del
@@ -19,6 +27,9 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+def del_del(string)
+	"string".delete "del_del"
+end
 
 # Question 3: a method called missing_char
 #############
@@ -26,6 +37,9 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+def missing_char
+
+end
 
 # Question 4: a method called near_hundred?
 #############

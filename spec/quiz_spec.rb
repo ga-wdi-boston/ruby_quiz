@@ -34,6 +34,12 @@ end
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
 
+describe '#del_del'do
+  it 'returns string without del_del'
+  expect(question_2).to eq "string"
+  end
+end
+
 # Question 3: a method called missing_char
   # Example Usage:
   # missing_char("kitten", 1) => "ktten"
