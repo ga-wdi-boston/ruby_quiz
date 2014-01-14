@@ -57,3 +57,9 @@ end
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+def back_around(string)
+	final_char = string[-1]
+	string.unshift = final_char
+	string
+
+end
