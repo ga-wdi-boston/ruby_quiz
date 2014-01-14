@@ -28,7 +28,7 @@ end
 # del_del("xyz") => "xyz"
 
 def del_del(string)
-	string.sub("/del/", "")
+	string.sub(/del/, "")
 end
 
 # Question 3: a method called missing_char
