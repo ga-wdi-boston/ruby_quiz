@@ -44,7 +44,7 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 def missing_char(word, number)
-	if word
+	word.delete(word[number])
 end
 
 # Question 4: a method called near_hundred
