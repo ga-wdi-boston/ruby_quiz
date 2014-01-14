@@ -32,7 +32,8 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 def missing_char(string, index)
-	string.delete(string[index])
+	string[index] = ''
+	string
 end
 
 # Question 4: a method called near_hundred
