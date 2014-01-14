@@ -47,7 +47,7 @@ end
 # near_hundred('two') => RuntimeError: Please enter a number!
 def near_hundred(num)
   raise RuntimeError if num.class != Fixnum
-  (90..99).to_a.include?(num)
+  (90..99).include?(num)
 end
 
 # Question 5: a method called back_around
