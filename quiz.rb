@@ -11,14 +11,24 @@
 # You can sleep in if it is not a weekday or if you are on vacation.
 # sleep_in? => false
 # sleep_in?(vacation: true) => true
-def sleep_in?
+def sleep_in?(options = {})
+	@vacation = options[:vacation] || false
+	if Time.now.wday == 7
+		return true
+	elsif Time.now.wday == 6
+		return true
+	elsif {:vacation => true}
+		return true
+	else
+		return false
+	end
 end
 
 # Question 2: a method called del_del
 #############
-# Remove "del" from a string.
-# del_del("abdelcd") => "abcd"
-# del_del("xyz") => "xyz"
+def delete_del(string)
+	string.sub!(/"del"/, " ")
+end
 
 # Question 3: a method called missing_char
 #############
