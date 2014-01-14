@@ -31,7 +31,7 @@ end
 # del_del("xyz") => "xyz"
 def del_del(word)
 	if word.["del"] != nil
-		return word = word.delete["del"]
+		return word = word.chomp('del')
 	else 
 		return word
 	end
@@ -44,7 +44,7 @@ end
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
 def missing_char(word, number)
-	word.delete(word[number])
+	word.delete(word.chomp(word[number])
 end
 
 # Question 4: a method called near_hundred
@@ -75,7 +75,7 @@ end
 
 def back_around(word)
 	last_digit = word[word.length - 1]
-	return "#{last_digit}#{word.delete[last_digit]}
+	return "#{last_digit}#{word.chomp(word[last_digit])}
 end
 
 
