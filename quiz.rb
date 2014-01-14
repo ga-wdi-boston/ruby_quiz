@@ -13,7 +13,7 @@
 # sleep_in?(vacation: true) => true
 def sleep_in?(options={})
   return true if options[:vacation] == true # Specify true so :vacation == 4 doesn't trigger
-  return false unless (Time.now.wday == 6 || Time.now.wday == 7)
+  return false unless (Time.now.wday == 6 || Time.now.wday == 0)
 end
 
 # Question 2: a method called del_del
