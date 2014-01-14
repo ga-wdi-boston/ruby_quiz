@@ -20,6 +20,15 @@ end
 # Remove "del" from a string.
 # del_del("abdelcd") => "abcd"
 # del_del("xyz") => "xyz"
+def del_del(string, pattern)
+	match = pattern.match(string)
+	if match
+		"#{match.pre_match}#{match.post_match}"
+	else
+		string
+	end
+end
+
 
 # Question 3: a method called missing_char
 #############
@@ -27,6 +36,9 @@ end
 # If you don't enter a string
 # missing_char("kitten", 1) => "ktten"
 # missing_char(347, 1) => RuntimeError: Please enter a string!
+def missing_char(string, index)
+	string.delete(string[index])
+end
 
 # Question 4: a method called near_hundred
 #############
@@ -36,6 +48,9 @@ end
 # 93.near_hundred? => true
 # near_hundred(52) => false
 # near_hundred('two') => RuntimeError: Please enter a number!
+def near_hundred?(number)
+	number.between?(90, 99)
+end
 
 # Question 5: a method called back_around
 #############
