@@ -12,7 +12,7 @@ require_relative '../quiz'
 describe "#sleep_in?" do
   it "returns true if the current day is Saturday or Sunday" do
     # assuming you're answering this on a weekday!
-    expect(sleep_in?).to be(false)
+    expect(sleep_in?(day: 4)).to be(false)
   end
 
   it "takes an options hash as a parameter" do
@@ -33,6 +33,15 @@ end
   # Example Usage:
   # del_del("abdelcd") => "abcd"
   # del_del("xyz") => "xyz"
+
+  describe '#del_del' do
+    it 'will return the string without del in it' do
+      expect(del_del("abdelcd")).to eq "abcd"
+      expect(del_del("xyz")).to eq "xyz"
+
+    end
+
+  end
 
 # Question 3: a method called missing_char
   # Example Usage:
