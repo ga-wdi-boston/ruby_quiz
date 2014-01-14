@@ -59,3 +59,9 @@ end
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
+
+class String
+  def back_around
+    self[-1] << self[0...self.length-1]
+  end
+end

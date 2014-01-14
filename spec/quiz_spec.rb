@@ -75,3 +75,10 @@ end
   # Example Usage:
   # "cat".back_around => "tca"
   # "hello".back_around => "ohell"
+
+  describe '#back_around' do
+    it 'returns tca for cat' do
+      expect('cat'.back_around).to eq 'tca'
+    end
+
+  end
