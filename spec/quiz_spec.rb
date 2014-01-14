@@ -69,8 +69,7 @@ end
 
 describe '#back_around' do
   it 'should take the last character of a string and move it to the first position' do
-    string = back_around("cat")
-    expect(string).to eq "tca"
+    expect('cat'.back_around).to eq "tca"
   end
 end
 

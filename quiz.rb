@@ -53,9 +53,8 @@ end
 # Given a string, move the last character to the beginning.
 # "cat".back_around => "tca"
 # "hello".back_around => "ohell"
-def back_around(string)
-	chars_array = []
-	string.split("").each { |char| chars_array << char }
-	final_char = chars_array.pop
-	chars_array.unshift(final_char).join('')
+class String
+	def back_around
+		self[-1] + self[0..-2]
+	end
 end
